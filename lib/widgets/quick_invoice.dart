@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
-import 'package:responsive_dash_board/widgets/latest_transaction_list_view.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_header.dart';
 
+import 'latest_transaction.dart';
+import 'quick_invoice_form.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -16,8 +15,9 @@ class QuickInvoice extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           QuickInvoiceHeader(),
-          Text('Latest Transaction',style:AppStyle.styleMedium16),
-          LatestTransactionListView()
+          LatestTransaction(),
+          Divider(height: 48, color: Color(0xffF1F1F1)),
+          QuickInvoiceForm(),
         ],
       ),
     );
