@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 import 'dots_indicator.dart';
+import 'income_section.dart';
 import 'my_cards_page_view.dart';
 
 class MyCardsSection extends StatefulWidget {
