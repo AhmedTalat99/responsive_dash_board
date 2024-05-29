@@ -10,7 +10,7 @@ class QuickInvoiceForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-/*         Row(
+        Row(
           children: [
             Expanded(
                 child: TitleTextField(
@@ -30,7 +30,7 @@ class QuickInvoiceForm extends StatelessWidget {
             SizedBox(width: 16),
             Expanded(child: TitleTextField(title: 'Item mount', hint: 'USD')),
           ],
-        ), */
+        ),
         Row(
           children: [
             Expanded(
