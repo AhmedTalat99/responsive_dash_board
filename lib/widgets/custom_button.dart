@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.backGroundColor, this.textColor});
+  const CustomButton({super.key, this.backGroundColor, this.textColor, required this.name});
 
   final Color? backGroundColor, textColor;
+  final String name;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +20,7 @@ class CustomButton extends StatelessWidget {
         ),
         onPressed: () {},
         child: Text(
-          'Send Money',
+          name,
           style: AppStyle.styleSemiBold18.copyWith(color: textColor),
         ),
       ),

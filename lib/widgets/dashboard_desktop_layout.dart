@@ -17,17 +17,34 @@ class DashboardDesktopLayout extends StatelessWidget {
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 2,
-          child: AllExpensesAndQuickInvoice(),
-        ),
-        SizedBox(width: 24),
-        Expanded(
-          child: Column(
-            children: [
-              SizedBox(height: 40),
-              MyCardsAndTransactionHistory(),
-              SizedBox(height: 17),
-              Expanded(child: IncomeSection()),
+          flex: 3,
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: AllExpensesAndQuickInvoice(),
+                      ),
+                    ),
+                    SizedBox(width: 24),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          SizedBox(height: 40),
+                          MyCardsAndTransactionHistory(),
+                          SizedBox(height: 17),
+                          Expanded(child: IncomeSection()),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
