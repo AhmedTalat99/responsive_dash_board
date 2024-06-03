@@ -1,4 +1,3 @@
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -17,7 +16,7 @@ class IncomeSectionHeader extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Income', style: AppStyle.styleSemiBold20),
+            Text('Income', style: AppStyle.styleSemiBold20(context)),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: ShapeDecoration(
@@ -31,7 +30,7 @@ class IncomeSectionHeader extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  const Text('Monthly', style: AppStyle.styleMedium16),
+                  Text('Monthly', style: AppStyle.styleMedium16(context)),
                   const SizedBox(width: 16),
                   Transform.rotate(
                     angle: -90 * pi / 180,
