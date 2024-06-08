@@ -33,37 +33,64 @@ class _AllExpensesItemsRowState extends State<AllExpensesItemsRow> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensesItem(
+              itemModel: items[0],
+              isSelected: selectedIndex == 0,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              itemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              itemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
+    );
+   /*  return Row(
       children: items.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: GestureDetector(
-                    onTap: () {
-                      updateIndex(index);
-                    },
-                    child: AllExpensesItem(
-                        itemModel: item, isSelected: selectedIndex == index)),
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(index);
+            },
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+              child: AllExpensesItem(
+                itemModel: item,
+                isSelected: selectedIndex == index,
               ),
             ),
-          );
-        } else {
-          return Expanded(
-              child: GestureDetector(
-                  onTap: () {
-                    updateIndex(index);
-                  },
-                  child: AllExpensesItem(
-                      itemModel: item, isSelected: selectedIndex == index)));
-        }
+          ),
+        );
       }).toList(),
-    );
+    ); */
   }
 
   void updateIndex(int index) {

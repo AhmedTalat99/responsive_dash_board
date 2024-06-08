@@ -20,13 +20,17 @@ class MyCard extends StatelessWidget {
           ),
         ),
         child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+
           children: [
             ListTile(
               contentPadding:
                   const EdgeInsets.only(left: 31, right: 42, top: 16),
               title: Text('Name Card',
-                  style: AppStyle.styleRegular16(context).copyWith(color: Colors.white)),
-              subtitle:  Text('Syah Bandi', style: AppStyle.styleMedium20(context)),
+                  style: AppStyle.styleRegular16(context)
+                      .copyWith(color: Colors.white)),
+              subtitle:
+                  Text('Syah Bandi', style: AppStyle.styleMedium20(context)),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Expanded(child: SizedBox()),
@@ -44,7 +48,7 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 26),
+            const Flexible(child: SizedBox(height: 26)),
           ],
         ),
       ),

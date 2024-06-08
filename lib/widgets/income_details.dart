@@ -16,7 +16,7 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.sizeOf(context).width);
+   // print(MediaQuery.sizeOf(context).width);
     return Column(
         children: items.map((e) => ItemDetails(itemDetailsModel: e)).toList());
   }

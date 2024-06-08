@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'all_expenses.dart';
 import 'quick_invoice.dart';
 
-class AllExpensesAndQuickInvoice extends StatelessWidget {
-  const AllExpensesAndQuickInvoice({
+class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
+  const AllExpensesAndQuickInvoiceSection({
     super.key,
   });
 

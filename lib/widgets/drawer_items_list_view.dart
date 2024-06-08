@@ -34,13 +34,16 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
                 if (activeIndex != index) {
                   setState(() {
                     activeIndex = index;
-                    print(activeIndex);
+                   // print(activeIndex);
                   });
                 }
               },
-              child: DrawerItem(
-                drawerItemModel: items[index],
-                isActive: activeIndex == index,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: DrawerItem(
+                  drawerItemModel: items[index],
+                  isActive: activeIndex == index,
+                ),
               ));
         });
   }
