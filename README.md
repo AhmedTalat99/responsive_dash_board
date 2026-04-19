@@ -60,5 +60,3 @@ Contributions are welcome. Feel free to fork the repository and submit a pull re
 This project is for educational purposes.
 
 ---
-
-لو عايز نزودها مستوى أعلى (مثلاً نكتب breakpoints + architecture + صور mockups) هتبقى أقوى جدًا في الـ CV و GitHub profile 👍
